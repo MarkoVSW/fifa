@@ -1,6 +1,5 @@
 import pandas as pd
-from gui import TestApp
-from update_readme import readme_main
+from readme import readme_main, load_df
 
 def update_dataframe(df, player1, goals1, player2, goals2):
     name_mapping = {"SM": 0, "MR": 1, "MV" : 2}
@@ -32,7 +31,7 @@ def update_dataframe(df, player1, goals1, player2, goals2):
     
 
 def main():
-    df = pd.read_csv('table.csv')
+    df = load_df()
     while True:
         print("Enter 'exit' to quit.")
         player1 = input("Enter player one's name (SM/MR/MV): ").upper()
