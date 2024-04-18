@@ -24,6 +24,7 @@ class FifaTable:
                 'POINTS': [16, 25, 18]
             }
             df = pd.DataFrame(data, index=[0, 1, 2])
+            df = df.sort_values(by='POINTS', ascending=False)
             df.to_csv(self.table_name)
         return df
     
