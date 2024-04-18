@@ -142,7 +142,7 @@ class FifaTable:
         os.remove(self.table_name)
         os.remove(self.history_table_name)
         self.table = self.create_table()
-        self.history_table = self.create_history_table()
+        #self.history_table = self.create_history_table()
         self.update_readme()
 
     def append_history_to_table(self, start=0):
